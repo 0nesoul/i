@@ -1,0 +1,247 @@
+:root {
+    --clr-a: #013A48;
+    --clr-b: #5D2F53;
+    --clr-c: #121214;
+    --clr-d: #8EC0CB;
+    --clr-e: #024C6C;
+    --clr-f: #063954;
+    --clr-g: #48587B;
+    --clr-h: #013A48;
+    --clr-i: #5D2F53;
+    --clr-j: #121214;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lilita One', cursive;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover {
+    color: var(--clr-d);
+    transition: all 0.5s ease;
+}
+
+/* --------------------- Main --------------------- */
+
+main {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assets/wallpaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* --------------------- Header --------------------- */
+
+header {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.logo {
+    float: left;
+    width: 20%;
+    height: 100px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin: 25px;
+}
+
+.menu {
+    float: left;
+    width: 60%;
+    height: 100px;
+}
+
+.authorization { 
+    float: left;
+    width: 20%;
+    height: 100px;
+}
+
+.authorization div {
+    float: right;
+    width: fit-content;
+    height: 100px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu li {
+    margin-top: 26px;
+    border: 2px solid #000;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+a img {
+    width: 40px;
+    height: 40px;
+    margin: 30px;
+}
+
+.add { 
+    margin-right: 0;
+}
+
+/* --------------------- Section --------------------- */
+
+section {
+    width: 400px;
+    height: 700px;
+    padding: 20px;
+}
+
+section li {
+    color: #FFF;
+    font-size: 24px;
+    text-transform: uppercase;
+    word-spacing: 0.5rem;
+    cursor: default;
+}
+
+section a {
+    padding: 10px;
+    border: 2px solid red;
+    border-radius: 15px;
+    color: #FFF;
+}
+
+/* --------------------- Container --------------------- */
+
+.container {
+    width: 100%;
+    height: 840px;
+}
+
+.top {
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+}
+
+.left {
+    float: left;
+    width: 50%;
+    height: 520px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.left p {
+    text-align: center;
+    overflow: hidden;
+}
+
+.right {
+    float: left;
+    width: 50%;
+    height: 520px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.right ul li {
+    float: left;
+    margin: 40px;
+}
+
+.right ul li img {
+    width: 150px;
+    height: 150px;
+}
+
+.bottom {
+    width: 100%;
+    height: 320px;
+    background-image: url('../assets/st.jpg');
+}
+
+
+.contact li {
+    padding: 20px;
+}
+
+.menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #FFF;
+    font-size: 40px;
+    margin: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #FFF;
+    font-size: 40px;
+    margin: 30px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+/* --------------------- Queries--------------------- */
+
+@media  (max-width: 1024px) {
+    .menu ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: fit-content;
+        background-color: rgba(0, 0, 0, .2);
+        padding: 10px;
+        visibility: hidden;
+    }
+    .menu li {
+        margin-top: 10px;
+        border: 2px solid #FFF;
+        border-radius: 20px;
+        padding: 5px;
+        text-align: center;
+        color: #FFF;
+    }
+    .authorization {
+        display: none;
+    }
+    .menu-btn {
+        display: block;
+    }
+}

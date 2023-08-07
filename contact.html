@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icecream project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="logo">
+                <img src="assets/logo.png" alt="logo">
+            </div>
+            <div class="menu">
+                <nav class="mob-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="authorization">
+                <div>
+                    <a href=""><img src="assets/add.png" alt="add" class="add"></a>
+                    <a href=""><img src="assets/user.png" alt="user"></a>
+                </div>
+            </div>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="close-btn">
+                <i class="fas fa-times"></i>
+            </div>
+        </header>
+        <section>
+            <ul class="contact">
+                <li><p style="color: red">srewberds@gmail.com</p></li>
+                <li><p style="color: red">0931974653</p></li>
+                <li><p style="color: red">Доценко 10</p></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
+
+<script>
+    $(document).ready(function () {
+        // JQuery for expand and collapse the sidebar
+        $('.menu-btn').click(function () {
+            //$('.sidebar').addClass('active');
+            $('.close-btn').css("visibility", "visible");
+            $('.menu-btn').css("visibility", "hidden");
+            $('.mob-menu').css("visibility", "visible");
+        });
+        // for close button
+        $('.close-btn').click(function () {
+            //$('.sidebar').removeClass('active');
+            $('.close-btn').css("visibility", "hidden");
+            $('.menu-btn').css("visibility", "visible");
+            $('.mob-menu').css("visibility", "hidden");
+        });
+    })
+</script>
